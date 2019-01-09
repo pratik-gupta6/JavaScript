@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Hi!! Welcome to JS Calculator</p>
+<p>
+<form name="calc">
+Number 1:<input type="text" id="num1"></br>
+Number 2:<input type="text" id="num2"></br>
+Result :<input type="text" id="res"></br>
+<button type="button" onclick=add()>Add</button>
+<button type="button" onclick=subtract()>Subtract</button>
+<button type="button" onclick=divide()>Divide</button>
+<button type="button" onclick=multiply()>Multiply</button>
+</form>
+<script>
+function add()
+{
+	var n1 = Number(document.getElementById('num1').value);
+	var n2 = Number(document.getElementById('num2').value);
+	var r= n1+n2;
+	document.getElementById('res').value=r;
+}
+function subtract()
+{
+	var n1 = Number(document.getElementById('num1').value);
+	var n2 = Number(document.getElementById('num2').value);
+	var r= n1-n2;
+	document.getElementById('res').value=r;
+}
+function divide()
+{
+	var n1 = Number(document.getElementById('num1').value);
+	var n2 = Number(document.getElementById('num2').value);
+	var r= n1/n2;
+	document.getElementById('res').value=r;
+}
+function multiply()
+{
+	var n1 = Number(document.getElementById('num1').value);
+	var n2 = Number(document.getElementById('num2').value);
+	var r= n1*n2;
+	document.getElementById('res').value=r;
+}
+</script>
+
+</body>
+</html>
