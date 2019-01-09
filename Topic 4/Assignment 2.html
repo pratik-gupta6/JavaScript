@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Hi</p>
+<p>Enter a variable name as per ur choice</p>
+<p>
+<form name="l1">
+<input type="text" id="name">
+<input type="submit" name="Submit" onclick=manupulation()>
+</form>
+<script>
+function manupulation()
+{
+	var varname = document.getElementById('name').value;
+	this[varname]=120;
+	console.log(varname+" stores data "+this[varname]);
+	alert("Check in Console Output");
+}
+</script>
+
+</body>
+</html>
