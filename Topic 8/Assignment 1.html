@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Java Script - Topic 8 - Assignment Question 1</p></br>
+<p>Press the button to display the CD details and price</p></br>
+</hr>
+<button type="button" onclick=getDetails()>Click Here!!</button>
+<div id=cd>
+</div>
+<script>
+function cddetails(name,publisher,price)
+{
+	this.name = name;
+	this.publisher = publisher;
+	this.price = price;
+}
+function getDetails()
+{
+	document.getElementById('cd').innerHTML = "";
+	var cd=new cddetails("DOTA","IceFrog",1000);
+	document.getElementById('cd').innerHTML +="Name : "+cd.name+"</br>";
+	document.getElementById('cd').innerHTML +="Publisher : "+cd.publisher+"</br>";
+	var finalprice = cd.price + 0.10*(cd.price) -0.03*(cd.price);
+	document.getElementById('cd').innerHTML +="Final Price : "+finalprice+"</br>";
+}
+</script>
