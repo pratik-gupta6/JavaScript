@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="text">Java Script - Topic 9 - Assignment Question 1</p></br>
+<div>
+Enter a sample string:<input type="text" id="str"></br>
+Enter a letter to find its frequency in string:<input type="text" id="letter"></br>
+<button type="button" onclick=freq()>Output</button></br>
+<button type="button" onclick=global()>Click to print global Variable after calling output</button></br>
+</div>
+<div id="output"></div>
+<script>
+function freq()
+{
+	window.str = document.getElementById('str').value;
+	var letter = document.getElementById('letter').value;
+	var count = 0;
+	if(letter.length==1)
+	{
+		var i=1;
+		console.log("Inside if block");
+		console.log("n:"+str);
+		for(i=0;i<str.length;i++)
+		{
+			console.log("after for block");
+			if(str.charAt(i)==letter.charAt(0))
+			{
+				console.log("Inside if comparing block :"+str.charAt(i)+"::"+letter.charAt(0));
+				count++;
+			}
+		}
+		console.log("after for block");
+	}
+	else if(letter.length==0)
+	{
+		console.log("Inside if-else block");
+		alert("Please enter a value for letter");
+	}
+	else
+	{	
+		console.log("Inside else block");
+		alert("Word entered instead letter, try again!!");
+		location.reload();
+	}
+	document.getElementById('output').innerHTML +="The no of occurrence of letter in string is :"+count+"</br>";
+}
+function global()
+{
+	alert("Global Variable Value:"+str);
+	location.reload();
+}
+</script>
