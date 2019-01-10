@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Java Script - Topic 7 - Assignment Question 3</p></br>
+<div id="orgarr">
+The Original Array</br>
+</div>
+<hr>
+<div>
+Enter the value of N and click "Show" to get the last "N" values of the array</br>
+N:<input type=text id="n"/></br></br>
+<button type="button" onclick=show()>Show</button></br>
+</div>
+<div id="newarr">
+</div>
+
+<script>
+var a = new Array();
+a[0] = 23;
+a[1] = 11;
+a[2] = 45;
+a[3] = 76;
+a[4] = 89;
+a[5] = 75;
+a[6] = 54;
+for(i=0;i<a.length;i++)
+	document.getElementById('orgarr').innerHTML += a[i]+" ";
+function show()
+{
+	document.getElementById('newarr').innerHTML ="";
+	var n=Number(document.getElementById('n').value);
+	if(n>=a.length)
+	{
+		alert("You have entered the value of N greater than or equal to array size ="+a.length);
+		document.getElementById('newarr').innerHTML += "The array values are </br>";
+		for(i=0;i<a.length;i++)
+			document.getElementById('newarr').innerHTML += a[i]+" ";
+		
+	}
+	else
+	{
+		alert("You have entered the value of N les than array size ="+a.length);
+		document.getElementById('newarr').innerHTML += "The array values are </br>";
+		for(i=a.length-n;i<a.length;i++)
+			document.getElementById('newarr').innerHTML += a[i]+" ";
+		
+	}
+}
+</script>
