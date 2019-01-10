@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="text">Java Script - Topic 8 - Assignment Question 4</p></br>
+<script>
+var a="";
+var b="";
+do
+{
+	a = prompt("Enter the Background Color", "");
+	b = prompt("Enter the text color", "");
+	document.body.style.backgroundColor = a;
+	document.getElementById('text').style.color = b;
+	alert("Done");
+	}while(a.toLowerCase()!="no");
+</script>
