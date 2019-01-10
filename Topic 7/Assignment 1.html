@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Java Script - Topic 7 - Assignment Question 1</p></br>
+<p>Press the button to generate the 1st 100 Fibonacci series number which will be shown in logs</p></br>
+</hr>
+<button type="button" onclick=fibo()>Click to Generate series</button>
+<script>
+function fibo()
+{
+var a = 0;
+var b = 1;
+var i = 2;
+var c;
+console.log("Fibo Number -> "+a+"\t count number "+1+"\n");
+console.log("Fibo Number -> "+b+"\t count number "+2+"\n");
+for(i=3;i<=100;i++)
+{
+	c = a+b;
+	console.log("Fibo Number -> "+c+"\t count number "+i+"\n");
+	b=a;
+	a=c;
+}
+alert("Kindly check the log");
+}
+</script>
