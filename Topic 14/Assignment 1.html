@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="text">Java Script - Topic 14 - Assignment Question 1</p></br>
+<p>Enter 2 numbers</p></br>
+Number 1:<input type="text" id=num1></br>
+Number 2:<input type="text" id=num2></br>
+<p><button type="button" onclick=divide()>Divide</button>
+<p>Check the logs for output</br>
+</p>
+<script>
+function divide()
+{
+	var a=Number(document.getElementById('num1').value);
+	var b=Number(document.getElementById('num2').value);
+	try
+	{
+		if(b == 0)
+			throw "0";
+		var c=a/b;
+		console.log(c);
+	}
+	catch(e)
+	{
+		console.log("Denominator cannot be 0");
+	}
+}
+</script>
