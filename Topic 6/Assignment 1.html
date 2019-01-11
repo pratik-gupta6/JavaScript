@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="text">Java Script - Topic 6 - Assignment Question 1</p></br>
+<p>Check the logs for output</br>
+</p>
+<script>
+function patternprint (pattern, sum, ...ar)
+{
+	if (ar.length === 0)
+	{
+		if (sum == 100) console.log(pattern);
+	}
+	else 
+	{
+		const [first, ...butFirst] = ar;
+
+		if (pattern !== "") {
+
+		// case one, addition
+		patternprint((pattern+"+"+first), sum + first, ...butFirst);
+
+		// case two, subtraction
+		patternprint((pattern+"-"+first), sum - first, ...butFirst);	
+	}
+    else
+		patternprint((""+first), first, ...butFirst);
+    // case three, catenation
+    if (butFirst.length > 0) {
+      const [second, ...butSecond] = butFirst;
+      patternprint(pattern, sum, first * 10 + second, ...butSecond);
+    }
+  }
+}
+patternprint("", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+</script>
