@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Java Script - Topic 11 - Assignment Question 1</p></br>
+<p>Enter 3 numbers and click Submit to find the sign of the product of 3 numbers</br></p>
+Number 1:<input type="text" id=num1></br>
+Number 2:<input type="text" id=num2></br>
+Number 3:<input type="text" id=num3></br>
+<p><button type="button" onclick=sign()>Submit</button>
+<script>
+function sign()
+{
+	var pro = (Number(document.getElementById('num1').value))*(Number(document.getElementById('num2').value))*(Number(document.getElementById('num3').value));
+	if(pro>=0)
+		alert("The sign is +");
+	else
+		alert("The sign is -");
+	location.reload();
+}
+</script>
