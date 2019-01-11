@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="text">Java Script - Topic 10 - Assignment Question 1</p></br>
+<p><button type="button" onclick=donate()>Donate for a Cause</button>
+<script>
+function donate()
+{
+	var money = prompt("Enter your denomination", "0");
+	money = Number(money);
+	money= Math.round(money);
+	alert("Donated amount :RS."+money);
+}
+</script>
