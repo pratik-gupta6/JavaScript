@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Java Script - Topic 11 - Assignment Question 2</p></br>
+<p>Enter 3 numbers and click Submit to find the sign of the product of 3 numbers</br></p>
+Number 1:<input type="text" id=num1>	Number 4:<input type="text" id=num4></br>
+Number 2:<input type="text" id=num2>	Number 5:<input type="text" id=num5></br>
+Number 3:<input type="text" id=num3></br>
+<p><button type="button" onclick=sign()>Submit</button>
+<script>
+function sign()
+{
+	var pro = Math.max((Number(document.getElementById('num1').value)),(Number(document.getElementById('num2').value)),(Number(document.getElementById('num3').value)),(Number(document.getElementById('num4').value)),(Number(document.getElementById('num5').value)));
+	alert(pro);
+	location.reload();
+}
+</script>
